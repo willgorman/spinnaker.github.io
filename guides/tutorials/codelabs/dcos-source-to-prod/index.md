@@ -46,10 +46,11 @@ dcos:
           password: ${DCOS_PASSWORD}
 dockerRegistry:
   enabled: true
-  primaryCredentials:
-    name: your-docker-registry
-    address: index.docker.io
-    repositories: TODO
+  accounts:
+  - name: your-docker-registry
+    address: https://index.docker.io
+    repositories:
+    - lwander/spin-kub-demo
     username: ${DOCKER_USER}
     password: ${DOCKER_PASSWORD}
 ```
